@@ -27,9 +27,7 @@ class ExcelWriterService(
     }
     
     fun createWorkbook(): SXSSFWorkbook {
-        return SXSSFWorkbook(config.memoryRowsInWindow).apply {
-            isForceFormulaRecalculation = false
-        }
+        return SXSSFWorkbook(config.memoryRowsInWindow)
     }
     
     fun createSheet(workbook: SXSSFWorkbook, sheetName: String): Sheet {
